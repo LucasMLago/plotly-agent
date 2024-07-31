@@ -9,6 +9,7 @@ setup(
         'langchain>=0.2.11',
         'plotly>=5.23.0',
         'pandas>=2.2.2',
+        'nbformat>=5.10.4'
     ],
     author='Lucas Lago',
     author_email='lukemartinslagonit@gmail.com',
