@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "plotly-agent"
+version = "0.1.0"
+description = "Visualize your data with Langchain and Plotly through a Plotly agent"
+authors = ["Lucas Lago <lukemartinslagonit@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+plotly = "^5.23.0"
+langchain = "^0.2.11"
+pandas = "^2.2.2"
+nbformat = "^5.10.4"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+python-dotenv = "^1.0.1"
+langchain = "^0.2.11"
+langchain-openai = "^0.1.19"
+setuptools = "^72.1.0"
+twine = "^5.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
