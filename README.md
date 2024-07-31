@@ -8,17 +8,15 @@ A library to create interactive charts with Plotly and Langchain through an data
 pip install plotly_agent
 ```
 
-# Example
-
-Libraries:
+# Imports
 
 ```bash
 from plotly_agent import extract_python_code
-from plotly_agent.evaluate.judge_text import judge
+from plotly_agent.evaluate import judge
 from plotly_agent import create_plotly_agent
 ```
 
-Execution code:
+# Execution code:
 
 ```bash
 # judge if a input deserve a data visualization
