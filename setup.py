@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='plotly-agent',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT License',
     packages=find_packages(),
     install_requires=[
