@@ -1,0 +1,6 @@
+plotly_agent/__pycache__
+plotly_agent/evaluate/__pycache__
+
+poetry.lock
+
+.env
