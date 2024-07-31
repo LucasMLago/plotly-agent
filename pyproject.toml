@@ -17,6 +17,7 @@ ipykernel = "^6.29.5"
 python-dotenv = "^1.0.1"
 langchain = "^0.2.11"
 langchain-openai = "^0.1.19"
+setuptools = "^72.1.0"
 
 [build-system]
 requires = ["poetry-core"]
