@@ -1,15 +1,8 @@
-# plotly_agent/evaluate/judge.py
-
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts.chat import ChatPromptTemplate
 from langchain_core.output_parsers.string import StrOutputParser
 
-def judge(text: str, openai_api_key: str, info: str = '') -> bool:
-    llm = ChatOpenAI(
-        openai_api_key=openai_api_key,
-        model_name='gpt-4o-mini',
-        temperature=0.0
-    )
+def judge(text: str, llm: str, info: str = '') -> bool:
 
     system_prompt_job_raw = '''
     Given a text, you must judge whether a chart is needed to visualize its content or not. \
