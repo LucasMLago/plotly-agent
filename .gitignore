@@ -6,4 +6,4 @@ poetry.lock
 .env
 
 dist
-plotly_agent.egg-info
+dist_test

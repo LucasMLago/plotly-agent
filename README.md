@@ -19,8 +19,14 @@ from plotly_agent.evaluate import judge
 # Execution code
 
 ```bash
+llm = ChatOpenAI(
+            openai_api_key=OPENAI_API_KEY,
+            model_name='gpt-4o-mini',
+            temperature=0.0
+        )
+
 # judge if a input deserve a data visualization
-judgment = judge(text=prompt, openai_api_key=OPENAI_API_KEY)
+judgment = judge(text=prompt, llm=llm)
 
 if judgment:
         llm = ChatOpenAI(
