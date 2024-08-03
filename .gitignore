@@ -1,7 +1,7 @@
 plotly_agent/__pycache__
 plotly_agent/evaluate/__pycache__
 
-example_test.ipynb
+example.ipynb
 poetry.lock
 
 .env
