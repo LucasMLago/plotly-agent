@@ -19,6 +19,18 @@ from plotly_agent.evaluate import judge
 # Execution code
 
 ```bash
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+data = {
+    "Title": ["The Godfather", "Pulp Fiction", "Inception", "The Lord of the Rings: The Fellowship of the Ring", "Forrest Gump"],
+    "Director": ["Francis Ford Coppola", "Quentin Tarantino", "Christopher Nolan", "Peter Jackson", "Robert Zemeckis"],
+    "Release Year": [1972, 1994, 2010, 2001, 1994],
+    "Genre": ["Drama/Crime", "Crime/Drama", "Science Fiction/Action", "Fantasy/Adventure", "Drama/Romance"],
+    "Rating": [9.2, 6.5, 8.0, 7.4, 5.3]
+}
+
+prompt = f'Create a visualization with the following data: {data}'
+
 llm = ChatOpenAI(
             openai_api_key=OPENAI_API_KEY,
             model_name='gpt-4o-mini',
