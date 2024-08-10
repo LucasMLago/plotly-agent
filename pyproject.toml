@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "plotly-agent"
-version = "0.1.4"
+version = "0.1.5"
 description = "Visualize your data with Langchain and Plotly through a Plotly agent"
 authors = ["Lucas Lago <lukemartinslagonit@gmail.com>"]
 readme = "README.md"
