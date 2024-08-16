@@ -1,5 +1,6 @@
 from langchain.tools import tool
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from plotly_agent.detect import check_malicious_code
 
 import pandas as pd
 import plotly.express as px
@@ -28,6 +29,11 @@ def create_plotly_chart(df, plotly_code):
     plotly_dict = {"df": pd.DataFrame(df), "px": px}
 
     try:
+        is_malicious = check_malicious_code(f'''{plotly_code}''')
+
+        if is_malicious:
+            return 'Malicious code detected!'
+        
         exec(plotly_code, globals(), plotly_dict)
         fig = plotly_dict.get("fig", None)
 
@@ -79,6 +85,11 @@ def repair_plotly_code(df, plotly_code, error_message):
     repair_dict = {"df": pd.DataFrame(df), "plotly_code": plotly_code, "error_message": error_message, "px": px}
 
     try:
+        is_malicious = check_malicious_code(f'''{plotly_code}''')
+
+        if is_malicious:
+            return 'Malicious code detected!'
+
         exec(plotly_code, globals(), repair_dict)
         fig = repair_dict.get("fig", None)
 
